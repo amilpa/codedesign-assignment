@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { FaMoon, FaRegSun } from "react-icons/fa";
+import "./App.scss";
+import Logo from "./components/Logo/Logo";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [theme, setTheme] = useState("light");
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <div className={`hero ${theme === "dark" ? "hero--dark" : "hero--light"}`}>
+      <div className="hero__container ">
+        <Logo theme={theme} />
+        <h1 className="hero__title">Assignment</h1>
+        <button
+          className={`theme-toggler ${
+            theme == "light" ? "theme-toggler--light" : "theme-toggler--dark"
+          }`}
+        >
+          {theme === "light" ? (
+            <FaRegSun
+              color={theme === "dark" ? "#ffffff" : "#ffffff"}
+              size={40}
+              onClick={() => {
+                setTheme("dark");
+              }}
+            />
+          ) : (
+            <FaMoon
+              color={theme === "dark" ? "white" : "black"}
+              size={30}
+              onClick={() => {
+                setTheme("light");
+              }}
+            />
+          )}
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
