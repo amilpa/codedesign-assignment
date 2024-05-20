@@ -2,15 +2,15 @@
 
 This is a react dropdown component made using react+vite
 
-<br>
+<br/>
 ![alt text](image.png)
 
-<br>
+<br/>
 Downward popup
-<br>
+<br/>
 ![alt text](image-1.png)
 
-<br>
+<br/>
 Upward popup
-<br>
+<br/>
 ![alt text](image-2.png)
