@@ -3,6 +3,8 @@
   margin: 0;
   box-sizing: border-box;
   transition: all 0.2s;
+  text-decoration: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .hero {
@@ -34,14 +36,13 @@
 }
 
 .hero__title {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 2rem;
 }
 
 .theme-toggler {
   margin-top: 30px;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 10px;
   box-shadow: none;
   outline: none;
@@ -54,4 +55,32 @@
 
 .theme-toggler--dark {
   background-color: #557ffe;
+}
+
+.hero__logo {
+  width: 400px;
+}
+
+.hero__dropdown {
+  margin-top: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero__logo {
+    width: 300px;
+  }
+
+  .hero__title {
+    font-size: 1.5rem;
+  }
+
+  .trial {
+    width: 300px;
+  }
+
+  .theme-toggler {
+    width: 45px;
+    height: 45px;
+    margin-top: 20px;
+  }
 }
